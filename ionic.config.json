@@ -1,0 +1,7 @@
+{
+  "name": "porridge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

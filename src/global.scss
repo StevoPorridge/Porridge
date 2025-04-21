@@ -36,7 +36,6 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
 
-ion-content{
-
-    --ion-background-color:#fef7e6;
+ion-content {
+    --ion-background-color:var(--porridge-color-primary);
 }

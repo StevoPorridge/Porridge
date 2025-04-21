@@ -4,20 +4,23 @@ import { Platform } from '@ionic/angular';
 import { StatusBar, Style } from '@capacitor/status-bar';
 
 @Component({
-  selector: 'app-root',
+  selector: 'porridge-root',
   templateUrl: 'app.component.html',
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent implements OnInit {
-  
+
   platform = inject(Platform);
 
   ngOnInit() {
     this.platform.ready().then(async () => {
-      
-      // Display content under transparent status bar
-      StatusBar.setOverlaysWebView({ overlay: true });
-      await StatusBar.setStyle({ style: Style.Light });
+
+      if(!this.platform.is('mobileweb'))
+      {
+        StatusBar.setOverlaysWebView({ overlay: true });
+        await StatusBar.setStyle({ style: Style.Light });
+      }
+
     });
   }
 

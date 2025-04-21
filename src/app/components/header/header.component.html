@@ -1,3 +1,21 @@
 <ion-toolbar class="porridge-header-toolbar">
   <ion-title size="large">Your Cats</ion-title>
+  @if (leftButton) {
+    <ion-buttons slot="start">
+      <ion-button
+        (click)="leftButtonAction()">
+        My Cats
+      </ion-button>
+    </ion-buttons>
+  }
+  @if (rightButton) {
+    <ion-buttons slot="end">
+      <ion-button
+        (click)="rightButtonAction()">
+        My Cats
+      </ion-button>
+    </ion-buttons>
+  }
+
+
 </ion-toolbar>

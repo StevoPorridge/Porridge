@@ -10,8 +10,7 @@ import { homeOutline } from 'ionicons/icons';
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
 })
 export class TabsComponent implements OnInit {
-  public environmentInjector = inject(EnvironmentInjector);
- 
+
   ngOnInit(): void {
     addIcons({homeOutline})
   }

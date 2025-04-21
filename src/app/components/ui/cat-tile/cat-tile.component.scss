@@ -1,0 +1,12 @@
+.cat-tile {
+  background: white;
+
+  &__image {
+    height: 250px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+  }
+}

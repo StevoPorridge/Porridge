@@ -37,5 +37,9 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
 
 ion-content {
-    --ion-background-color:var(--porridge-color-primary);
+  --ion-background-color: var(--porridge-color-primary);
+}
+
+.text-block {
+  padding: 0 20px;
 }

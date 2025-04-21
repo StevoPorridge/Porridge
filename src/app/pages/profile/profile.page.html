@@ -1,10 +1,9 @@
-<ion-content class="background-color" [fullscreen]="true">
-  <porridge-header [leftButton]="leftButton" (leftButtonTapped)="goBack()"></porridge-header>
+<ion-content [fullscreen]="true" class="background-color">
+  <porridge-header (rightButtonTapped)="goBack()" [rightButton]="rightButton"></porridge-header>
 
   Your cats:
 
-  @for (cat of cats(); track cat.name)
-  {
+  @for (cat of cats(); track cat.name) {
     Name: {{ cat.name }}
     Breed: {{ cat.breed }}
   }

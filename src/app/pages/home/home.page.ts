@@ -14,7 +14,7 @@ export class HomePage {
   navController = inject(NavController);
 
   rightButton: HeaderButton = {
-    icon: '',
+    icon: 'people-outline',
     iconColour: 'black'
   }
 

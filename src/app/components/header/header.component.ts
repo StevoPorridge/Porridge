@@ -1,17 +1,17 @@
-import {Component, EnvironmentInjector, EventEmitter, inject, Input, Output} from '@angular/core';
-import {IonToolbar, IonTitle, IonButton, IonButtons, NavController} from '@ionic/angular/standalone';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {IonButton, IonButtons, IonIcon, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 import {HeaderButton} from "../../models/header-button.model";
 
 @Component({
   selector: 'porridge-header',
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.scss'],
-  imports: [IonToolbar, IonTitle, IonButton, IonButtons],
+  imports: [IonToolbar, IonTitle, IonButton, IonButtons, IonIcon],
 })
 export class HeaderComponent {
 
   @Input() leftButton: HeaderButton | undefined;
-  @Input() rightButton: HeaderButton| undefined;
+  @Input() rightButton: HeaderButton | undefined;
 
   @Output() leftButtonTapped = new EventEmitter();
   @Output() rightButtonTapped = new EventEmitter();

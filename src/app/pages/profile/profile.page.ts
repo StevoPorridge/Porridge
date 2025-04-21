@@ -10,13 +10,13 @@ import {HeaderButton} from "../../models/header-button.model";
   selector: 'porridge-profile',
   templateUrl: 'profile.page.html',
   styleUrls: ['profile.page.scss'],
-  imports: [ IonContent, HeaderComponent],
+  imports: [IonContent, HeaderComponent],
 })
 export class ProfilePage {
   navController = inject(NavController);
 
-  leftButton: HeaderButton = {
-    icon: '',
+  rightButton: HeaderButton = {
+    icon: 'close-circle-outline',
     iconColour: 'black'
   }
 
@@ -25,14 +25,14 @@ export class ProfilePage {
 
     catArray.push({
       name: "Belle",
-      dateOfBirth: 1430035200000 ,
+      dateOfBirth: 1430035200000,
       breed: 'Moggy',
       gender: Gender.FEMALE
     })
 
     catArray.push({
       name: "Tucker",
-      dateOfBirth: 1303411200000 ,
+      dateOfBirth: 1303411200000,
       breed: 'Moggy',
       gender: Gender.MALE
     })

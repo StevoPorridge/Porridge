@@ -4,7 +4,7 @@
     <ion-buttons slot="start">
       <ion-button
         (click)="leftButtonAction()">
-        My Cats
+        <ion-icon aria-hidden="true" name="{{leftButton.icon}}" [style.color]="leftButton.iconColour"></ion-icon>
       </ion-button>
     </ion-buttons>
   }
@@ -12,7 +12,7 @@
     <ion-buttons slot="end">
       <ion-button
         (click)="rightButtonAction()">
-        My Cats
+        <ion-icon aria-hidden="true" name="{{rightButton.icon}}" [style.color]="rightButton.iconColour"></ion-icon>
       </ion-button>
     </ion-buttons>
   }

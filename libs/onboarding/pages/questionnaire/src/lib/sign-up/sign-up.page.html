@@ -13,9 +13,7 @@
           type="email"
         ></ion-input>
 
-        @if (showError(signUpForm.controls.email)) {
-          <p> you done goof'd your email son</p>
-        }
+
       </ion-item>
 
 
@@ -28,9 +26,8 @@
         ></ion-input>
       </ion-item>
 
-
-      @if (showError(signUpForm.controls.password)) {
-        <p> you done goof'd your password son</p>
+      @if (showError(signUpForm.controls.email) || showError(signUpForm.controls.password)) {
+        <p class="error-message">{{ this.error }}</p>
       }
     </form>
 

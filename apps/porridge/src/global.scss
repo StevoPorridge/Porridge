@@ -88,7 +88,14 @@ ion-input {
   --color: black;
   --background: white;
 
+  --max-width: 75%;
   --width: 75%;
   overflow: hidden;
   font-family: 'Merriweather', serif;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  text-align: center;
 }

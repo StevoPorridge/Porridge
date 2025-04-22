@@ -16,7 +16,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { AuthenticationService } from '@authentication/service';
 
 @Component({
   selector: 'onboarding-sign-up',
@@ -35,34 +35,42 @@ import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 })
 export class SignUpPage {
   navController = inject(NavController);
+  authenticationService = inject(AuthenticationService);
 
   signUpForm = new FormGroup({
-    email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+    ]),
   });
 
   error = '';
 
   public showError(control: AbstractControl): boolean {
+    if (control.hasError('email')) {
+      this.error = 'Your email is invalid';
+    }
+
+    if (control.hasError('minlength')) {
+      this.error = 'Your password must be at least 8 characters';
+    }
+
     return control.dirty && control.invalid;
   }
 
-  public signUp(): void {
+  public async signUp(): Promise<void> {
     if (!this.signUpForm.invalid) {
-      const auth = getAuth();
-      createUserWithEmailAndPassword(
-        auth,
+      const user = await this.authenticationService.signUp(
         this.signUpForm.controls.email.value!,
         this.signUpForm.controls.password.value!,
-      )
-        .then((userCredential) => {
-          const user = userCredential.user;
+      );
 
-          this.navController.navigateForward('');
-        })
-        .catch((error) => {
-          console.log('error: ', error);
-        });
+      if (user) {
+        await this.navController.navigateForward('bumba');
+      }
+
+      this.error = 'Sign up failed!';
     }
   }
 }

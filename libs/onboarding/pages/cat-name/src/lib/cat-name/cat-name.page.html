@@ -1,1 +1,19 @@
 <porridge-header (leftButtonTapped)="goBack()" [leftButton]="backButton"></porridge-header>
+<ion-content [fullscreen]="true" class="background-color cat-name-page">
+  <section class="cat-name-page__container">
+    <p class="text-block">What is your kitty called?</p>
+
+    <form [formGroup]="catNameForm">
+      <ion-item class="cat-breed-page__name-item">
+        <ion-input formControlName="name" name="cat-name"></ion-input>
+      </ion-item>
+    </form>
+
+
+  </section>
+
+</ion-content>
+<ion-footer class="onboarding-footer footer-container">
+  <ion-button (click)="addCat()" class="porridge-footer-button">Sign Up</ion-button>
+  <button (click)="addCat()" class="subtitle-as-button">I haven't decided</button>
+</ion-footer>

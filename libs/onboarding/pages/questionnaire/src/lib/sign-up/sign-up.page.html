@@ -1,4 +1,7 @@
-<porridge-header (leftButtonTapped)="goBack()" [leftButton]="backButton"></porridge-header>
+<porridge-header
+  (leftButtonTapped)="goBack()"
+  [leftButton]="backButton"
+></porridge-header>
 
 <ion-content [fullscreen]="true" class="background-color sign-up-page">
   <section class="sign-up-page__container">
@@ -14,29 +17,28 @@
           placeholder="Email"
           type="email"
         ></ion-input>
-
-
       </ion-item>
 
-
       <ion-item class="sign-up-page__password-item">
-        <ion-input [tabIndex]="1"
-                   class="porridge-input"
-                   formControlName="password"
-                   placeholder="Password"
-                   type="password"
+        <ion-input
+          [tabIndex]="1"
+          class="porridge-input"
+          formControlName="password"
+          placeholder="Password"
+          type="password"
         ></ion-input>
       </ion-item>
 
-      @if (showError(signUpForm.controls.email) || showError(signUpForm.controls.password)) {
+      @if (showError(signUpForm.controls.email) ||
+      showError(signUpForm.controls.password)) {
         <p class="error-message">{{ this.error }}</p>
       }
     </form>
-
-
   </section>
-
 </ion-content>
-<ion-footer>
-  <ion-button (click)="signUp()" class="porridge-footer-button" shape="round">Sign Up</ion-button>
+<ion-footer class="onboarding-footer">
+  <ion-button (click)="signUp()" class="porridge-footer-button" shape="round"
+  >Sign Up
+  </ion-button
+  >
 </ion-footer>

@@ -8,9 +8,9 @@
     "build-and-start:android": "npm run build && npx cap sync android && npx cap copy android && npx cap open android",
     "build-and-start:ios": "npm run build && npx cap sync ios && npx cap copy ios && npx cap open ios",
     "ng": "ng",
-    "start": "nx serve",
-    "build": "nx build",
-    "watch": "nx build --watch --configuration development",
+    "start": "nx serve porridge",
+    "build": "nx build porridge",
+    "watch": "nx build porridge --watch --configuration development",
     "test": "jest",
     "lint": "nx lint"
   },

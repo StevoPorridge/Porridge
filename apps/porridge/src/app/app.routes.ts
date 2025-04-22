@@ -4,11 +4,17 @@ export const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./components/tabs/tabs.routes').then((m) => m.routes),
+      import('@porridge/onboarding/landing').then((m) => m.routes),
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('@ui/tabs').then((m) => m.routes),
   },
   {
     path: 'my-cats',
     loadComponent: () =>
-      import('./pages/profile/profile.page').then((c) => c.ProfilePage),
+      import('./pages/profile-page/src/lib/profile/profile.page').then(
+        (c) => c.ProfilePage
+      ),
   },
 ];

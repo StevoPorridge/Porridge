@@ -40,6 +40,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'cat-age',
+        loadComponent: () =>
+          import('./pages/cat-age/src/lib/cat-age/cat-age.page').then(
+            (m) => m.CatAgePage,
+          ),
+      },
+      {
         path: '',
         redirectTo: 'landing',
         pathMatch: 'full',

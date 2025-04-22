@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'lib-cat-age',
   imports: [CommonModule],
-  templateUrl: './cat-age.component.html',
-  styleUrl: './cat-age.component.css',
+  templateUrl: './cat-age.page.html',
+  styleUrl: './cat-age.page.css',
 })
-export class CatAgeComponent {}
+export class CatAgePage {}

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Cat } from '../../../../../../apps/porridge/src/app/models/cat.model';
+import { Cat } from '../../../../../cat/models/cat/cat.model';
 import {
   IonCard,
   IonCardContent,

@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { IonContent, IonTitle, NavController } from '@ionic/angular/standalone';
-import { Cat } from '../../../../../models/cat.model';
+import { Cat } from '../../../../../../../../../libs/cat/models/cat/cat.model';
 import { Gender } from '../../../../../enums/gender.enum';
 import { HeaderButton } from '../../../../../models/header-button.model';
 import { Breed } from '../../../../../enums/breeds.enum';

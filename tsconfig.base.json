@@ -17,18 +17,30 @@
     "importHelpers": true,
     "target": "es2022",
     "module": "esnext",
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "useDefineForClassFields": false,
     "paths": {
       "@authentication/service": [
         "libs/authentication/services/authentication-service/src/index.ts"
       ],
-      "@porridge/main/*": ["apps/porridge/src/app/pages/*/src/index.ts"],
-      "@porridge/onboarding/*": ["libs/onboarding/pages/*/src/index.ts"],
-      "@ui/*": ["libs/ui/*/src/index.ts"],
-      "cat-age": ["libs/onboarding/pages/cat-age/src/index.ts"],
-      "cat-breed": ["libs/onboarding/pages/cat-breed/src/index.ts"],
-      "cat-name": ["libs/onboarding/pages/cat-name/src/index.ts"]
+      "@porridge/main/*": [
+        "apps/porridge/src/app/pages/*/src/index.ts"
+      ],
+      "@porridge/onboarding/*": [
+        "libs/onboarding/pages/*/src/index.ts"
+      ],
+      "@ui/*": [
+        "libs/ui/*/src/index.ts"
+      ],
+      "@onboarding/cat-service": [
+        "libs/cat/services/cat-service/src/index.ts"
+      ],
+      "@porridge/cat/models": [
+        "libs/cat/models/cat/index.ts"
+      ]
     },
     "rootDir": "."
   },
@@ -38,5 +50,8 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

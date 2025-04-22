@@ -67,7 +67,7 @@ export class SignUpPage {
       );
 
       if (user) {
-        await this.navController.navigateForward('bumba');
+        await this.navController.navigateForward('onboarding/cat-name');
       }
 
       this.error = 'Sign up failed!';

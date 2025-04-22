@@ -26,6 +26,20 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'cat-breed',
+        loadComponent: () =>
+          import('./pages/cat-breed/src/lib/cat-breed/cat-breed.page').then(
+            (m) => m.CatBreedPage,
+          ),
+      },
+      {
+        path: 'cat-name',
+        loadComponent: () =>
+          import('./pages/cat-name/src/lib/cat-name/cat-name.page').then(
+            (m) => m.CatNamePage,
+          ),
+      },
+      {
         path: '',
         redirectTo: 'landing',
         pathMatch: 'full',

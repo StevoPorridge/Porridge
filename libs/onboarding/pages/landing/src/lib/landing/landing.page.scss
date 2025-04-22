@@ -1,7 +1,15 @@
-:host {
-  background-color: var(--porridge-color-primary)
-}
+.landing-page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
 
-.background-image {
-  --background: url('/assets/logo-no-background.png') no-repeat 50% 20% / 55%;
+  &__image {
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
 }

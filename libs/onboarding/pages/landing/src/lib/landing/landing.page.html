@@ -1,9 +1,11 @@
-<ion-content [fullscreen]="true" class="background-color background-image">
-  <section class="background-image">
-    <p>Welcome to Porridge</p>
+<ion-content [fullscreen]="true" class="background-color landing-page">
+  <section class="landing-page__container">
+    <img [src]="'/assets/logo-no-background.png'" alt="Porridge logo" class="landing-page__image">
 
-    <ion-button>Sign up</ion-button>
-    <ion-button>Sign in</ion-button>
+    <p>Welcome to Porridge!</p>
+
+    <ion-button (click)="signUp()" class="landing-page__button" shape="round">Sign up</ion-button>
+    <ion-button (click)="signIn()" class="landing-page__button" shape="round">Sign in</ion-button>
   </section>
 
 </ion-content>

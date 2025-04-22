@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonButton, IonContent } from '@ionic/angular/standalone';
+import {
+  IonButton,
+  IonContent,
+  NavController,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'onboarding-landing',
@@ -8,4 +12,14 @@ import { IonButton, IonContent } from '@ionic/angular/standalone';
   templateUrl: './landing.page.html',
   styleUrl: './landing.page.scss',
 })
-export class LandingPage {}
+export class LandingPage {
+  navController = inject(NavController);
+
+  async signUp(): Promise<void> {
+    await this.navController.navigateForward('onboarding/questionnaire');
+  }
+
+  async signIn(): Promise<void> {
+    await this.navController.navigateForward('onboarding/sign-in');
+  }
+}

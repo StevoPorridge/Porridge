@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { TabsComponent } from './tabs.component';
+import { AuthGuard } from '../../../../../onboarding/onboarding.guard';
 
 export const routes: Routes = [
   {
@@ -10,6 +11,7 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () =>
           import('@porridge/main/home').then((m) => m.HomePage),
+        canActivate: [AuthGuard],
       },
       {
         path: '',

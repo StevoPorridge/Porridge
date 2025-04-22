@@ -1,11 +1,14 @@
 <ion-content [fullscreen]="true" class="background-color cat-breed-page">
   <section class="cat-breed-page__container">
     <p class="text-block">What is the breed of {{ catName() }}?</p>
+    <p class="text-block">If you're not sure, select Mixed Breed or Moggy</p>
 
-    <ion-item class="cat-breed-page__email-item">
-      <ion-select></ion-select>
-
-
+    <ion-item class="cat-breed-page__breed-item">
+      <ion-select placeholder="Select a breed">
+        @for (breed of catBreeds(); track breed) {
+          <ion-select-option [value]="breed">{{ breed }}</ion-select-option>
+        }
+      </ion-select>
     </ion-item>
 
 
@@ -13,5 +16,5 @@
 
 </ion-content>
 <ion-footer class="onboarding-footer">
-  <ion-button (click)="submit()" class="porridge-footer-button" shape="round">Sign Up</ion-button>
+  <ion-button (click)="submit()" class="porridge-footer-button">Next</ion-button>
 </ion-footer>

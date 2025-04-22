@@ -1,4 +1,4 @@
-import { Gender } from '../../../../apps/porridge/src/app/enums/gender.enum';
+import { Gender } from '../../enums/gender.enum';
 
 export interface Cat {
   id?: string | undefined;

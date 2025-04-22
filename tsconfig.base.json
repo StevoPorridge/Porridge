@@ -26,6 +26,15 @@
       "@authentication/service": [
         "libs/authentication/services/authentication-service/src/index.ts"
       ],
+      "@onboarding/cat-service": [
+        "libs/cat/services/cat-service/src/index.ts"
+      ],
+      "@porridge/cat/models": [
+        "libs/cat/models/cat/index.ts"
+      ],
+      "@porridge/enums": [
+        "libs/cat/enums/index.ts"
+      ],
       "@porridge/main/*": [
         "apps/porridge/src/app/pages/*/src/index.ts"
       ],
@@ -34,12 +43,6 @@
       ],
       "@ui/*": [
         "libs/ui/*/src/index.ts"
-      ],
-      "@onboarding/cat-service": [
-        "libs/cat/services/cat-service/src/index.ts"
-      ],
-      "@porridge/cat/models": [
-        "libs/cat/models/cat/index.ts"
       ]
     },
     "rootDir": "."

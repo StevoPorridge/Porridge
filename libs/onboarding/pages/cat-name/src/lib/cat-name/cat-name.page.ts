@@ -49,6 +49,7 @@ export class CatNamePage {
     this.catService.resetCats();
 
     let name = 'your kitty';
+
     if (
       this.catNameForm.controls.name.value &&
       this.catNameForm.controls.name.value !== ''

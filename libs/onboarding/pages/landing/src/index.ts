@@ -1,2 +1,2 @@
-export * from './lib/landing/landing.component';
-export * from './lib/onboarding.routes';
+export * from './lib/landing/landing.page';
+export * from '../../../onboarding.routes';

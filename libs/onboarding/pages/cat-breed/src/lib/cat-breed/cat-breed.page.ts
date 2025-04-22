@@ -8,6 +8,8 @@ import {
   IonSelect,
 } from '@ionic/angular/standalone';
 import { CatService } from '@onboarding/cat-service';
+import { NavController } from '@ionic/angular';
+import { HeaderButton } from '../../../../../../ui/header/src';
 
 @Component({
   selector: 'onboarding-cat-breed',
@@ -17,10 +19,22 @@ import { CatService } from '@onboarding/cat-service';
 })
 export class CatBreedPage {
   catService = inject(CatService);
+  navController = inject(NavController);
+
+  backButton: HeaderButton = {
+    icon: 'arrow-back-outline',
+    iconColour: 'black',
+  };
 
   catName = computed(() => {
     return this.catService.getCats()[0].name;
   });
+
+  public async goBack(): Promise<void> {
+    await this.navController.navigateBack('onboarding/landing', {
+      animated: false,
+    });
+  }
 
   submit() {}
 }

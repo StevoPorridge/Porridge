@@ -3,7 +3,12 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { Platform } from '@ionic/angular';
 import { StatusBar, Style } from '@capacitor/status-bar';
 import { addIcons } from 'ionicons';
-import { closeCircleOutline, homeOutline, peopleOutline } from 'ionicons/icons';
+import {
+  arrowBackOutline,
+  closeCircleOutline,
+  homeOutline,
+  peopleOutline,
+} from 'ionicons/icons';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../configs/firebase-dev.config';
 
@@ -21,7 +26,12 @@ export class AppComponent implements OnInit {
       initializeApp(firebaseConfig);
 
       // icons
-      addIcons({ homeOutline, closeCircleOutline, peopleOutline });
+      addIcons({
+        arrowBackOutline,
+        homeOutline,
+        closeCircleOutline,
+        peopleOutline,
+      });
 
       // status bar
       if (!this.platform.is('mobileweb')) {

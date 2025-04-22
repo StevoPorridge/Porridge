@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { IonContent, IonTitle, NavController } from '@ionic/angular/standalone';
 import { Cat } from '../../../../../../../../../libs/cat/models/cat/cat.model';
 import { Gender } from '../../../../../enums/gender.enum';
-import { HeaderButton } from '../../../../../models/header-button.model';
+import { HeaderButton } from '../../../../../../../../../libs/ui/header/src/lib/models/header-button.model';
 import { Breed } from '../../../../../enums/breeds.enum';
 import { HeaderComponent } from '@ui/header';
 import { CatTileComponent } from '@ui/cat-tile';

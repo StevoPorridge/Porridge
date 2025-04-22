@@ -17,6 +17,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthenticationService } from '@authentication/service';
+import { HeaderButton, HeaderComponent } from '@ui/header';
 
 @Component({
   selector: 'onboarding-sign-up',
@@ -29,6 +30,7 @@ import { AuthenticationService } from '@authentication/service';
     ReactiveFormsModule,
     IonFooter,
     IonItem,
+    HeaderComponent,
   ],
   templateUrl: './sign-up.page.html',
   styleUrl: './sign-up.page.scss',
@@ -45,7 +47,18 @@ export class SignUpPage {
     ]),
   });
 
+  backButton: HeaderButton = {
+    icon: 'arrow-back-outline',
+    iconColour: 'black',
+  };
+
   error = '';
+
+  public async goBack(): Promise<void> {
+    await this.navController.navigateBack('onboarding/landing', {
+      animated: false,
+    });
+  }
 
   public showError(control: AbstractControl): boolean {
     if (control.hasError('email')) {
@@ -67,7 +80,9 @@ export class SignUpPage {
       );
 
       if (user) {
-        await this.navController.navigateForward('onboarding/cat-name');
+        await this.navController.navigateForward('onboarding/cat-name', {
+          animated: false,
+        });
       }
 
       this.error = 'Sign up failed!';

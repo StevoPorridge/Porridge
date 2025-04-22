@@ -5,7 +5,7 @@ import {
   IonIcon,
   IonToolbar,
 } from '@ionic/angular/standalone';
-import { HeaderButton } from '../../../../../../apps/porridge/src/app/models/header-button.model';
+import { HeaderButton } from '../models/header-button.model';
 
 @Component({
   selector: 'porridge-header',

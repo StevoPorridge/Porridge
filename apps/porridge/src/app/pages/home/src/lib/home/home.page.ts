@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IonContent, NavController } from '@ionic/angular/standalone';
-import { HeaderButton } from '../../../../../models/header-button.model';
+import { HeaderButton } from '../../../../../../../../../libs/ui/header/src/lib/models/header-button.model';
 import { HeaderComponent } from '@ui/header';
 
 @Component({

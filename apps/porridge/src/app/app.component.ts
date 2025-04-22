@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { StatusBar, Style } from '@capacitor/status-bar';
 import { addIcons } from 'ionicons';
 import { closeCircleOutline, homeOutline, peopleOutline } from 'ionicons/icons';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../configs/firebase-dev.config';
 
 @Component({
   selector: 'porridge-root',
@@ -15,6 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.platform.ready().then(async () => {
+      // firebase
+      initializeApp(firebaseConfig);
+
       // icons
       addIcons({ homeOutline, closeCircleOutline, peopleOutline });
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "545967023983",
+    "project_id": "porridge-dev",
+    "storage_bucket": "porridge-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545967023983:android:7394d8fffb1ef0055b6a9a",
+        "android_client_info": {
+          "package_name": "com.porridge.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt2p4bLB9HdBPNkAu19n3IM5YBHb-gWSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

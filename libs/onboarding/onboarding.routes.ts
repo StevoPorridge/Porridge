@@ -8,22 +8,22 @@ export const routes: Routes = [
         path: 'landing',
         loadComponent: () =>
           import('./pages/landing/src/lib/landing/landing.page').then(
-            (m) => m.LandingPage
+            (m) => m.LandingPage,
           ),
       },
       {
         path: 'sign-in',
         loadComponent: () =>
           import('./pages/sign-in/src/lib/sign-in/sign-in.page').then(
-            (m) => m.SignInPage
+            (m) => m.SignInPage,
           ),
       },
       {
-        path: 'questionnaire',
+        path: 'sign-up',
         loadComponent: () =>
-          import(
-            './pages/questionnaire/src/lib/questionnaire/questionnaire.page'
-          ).then((m) => m.QuestionnairePage),
+          import('./pages/questionnaire/src/lib/sign-up/sign-up.page').then(
+            (m) => m.SignUpPage,
+          ),
       },
       {
         path: '',

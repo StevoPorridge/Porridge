@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="background-color sign-up-page">
+  <section class="sign-up-page__container">
+    <p>Let's create your account!</p>
+
+    <form [formGroup]="signUpForm" class="sign-up-page__container__form">
+      <ion-item class="sign-up-page__email-item">
+        <ion-input
+          [tabIndex]="0"
+          autocomplete="email"
+          class="porridge-input"
+          formControlName="email"
+          placeholder="Email"
+          type="email"
+        ></ion-input>
+
+        @if (showError(signUpForm.controls.email)) {
+          <p> you done goof'd your email son</p>
+        }
+      </ion-item>
+
+
+      <ion-item class="sign-up-page__password-item">
+        <ion-input [tabIndex]="1"
+                   class="porridge-input"
+                   formControlName="password"
+                   placeholder="Password"
+                   type="password"
+        ></ion-input>
+      </ion-item>
+
+
+      @if (showError(signUpForm.controls.password)) {
+        <p> you done goof'd your password son</p>
+      }
+    </form>
+
+
+  </section>
+
+</ion-content>
+<ion-footer>
+  <ion-button (click)="signUp()" class="porridge-footer-button" shape="round">Sign Up</ion-button>
+</ion-footer>

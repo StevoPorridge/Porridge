@@ -71,3 +71,6 @@ Thumbs.db
 
 resources/ios/**/*
 resources/android/**/*
+
+
+.nx/workspace-data

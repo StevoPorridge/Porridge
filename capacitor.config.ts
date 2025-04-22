@@ -5,10 +5,10 @@ const config: CapacitorConfig = {
   appName: 'porridge',
   webDir: 'www',
   plugins: {
-    "EdgeToEdge": {
-      "backgroundColor": "#ffffff"
-    }
-  }
+    EdgeToEdge: {
+      backgroundColor: '#ffffff',
+    },
+  },
 };
 
 export default config;

@@ -1,0 +1,11 @@
+<ion-content [fullscreen]="true" class="background-color">
+  <ion-title>Your cats:</ion-title>
+  <porridge-header
+    (rightButtonTapped)="goBack()"
+    [rightButton]="rightButton"
+  ></porridge-header>
+
+  @for (cat of cats(); track cat.name) {
+  <porridge-cat-tile [cat]="cat"></porridge-cat-tile>
+  }
+</ion-content>

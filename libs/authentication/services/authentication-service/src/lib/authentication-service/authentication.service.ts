@@ -13,13 +13,15 @@ export class AuthenticationService {
   auth = getAuth();
   user = this.auth.currentUser;
 
-  async getCurrentUser() {
-    onAuthStateChanged(this.auth, (user) => {
-      if (user) {
-        return user;
-      }
-
-      return undefined;
+  async getCurrentUser(): Promise<User | undefined> {
+    return new Promise((resolve) => {
+      onAuthStateChanged(this.auth, (user) => {
+        if (user) {
+          resolve(user); // Return the user if logged in
+        } else {
+          resolve(undefined); // Return undefined if no user is logged in
+        }
+      });
     });
   }
 

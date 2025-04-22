@@ -51,7 +51,7 @@
     "@capacitor/assets": "3.0.5",
     "@capacitor/cli": "7.2.0",
     "@ionic/angular-toolkit": "12.2.0",
-    "@nx/angular": "20.2.0",
+    "@nx/angular": "20.8.0",
     "@nx/eslint": "20.2.0",
     "@nx/js": "20.2.0",
     "@nx/workspace": "20.2.0",

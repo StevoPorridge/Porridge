@@ -1,12 +1,12 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {IonButton, IonButtons, IonIcon, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {IonButton, IonButtons, IonIcon, IonToolbar} from '@ionic/angular/standalone';
 import {HeaderButton} from "../../models/header-button.model";
 
 @Component({
   selector: 'porridge-header',
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.scss'],
-  imports: [IonToolbar, IonTitle, IonButton, IonButtons, IonIcon],
+  imports: [IonToolbar, IonButton, IonButtons, IonIcon],
 })
 export class HeaderComponent {
 

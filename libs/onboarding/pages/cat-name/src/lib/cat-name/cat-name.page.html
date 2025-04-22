@@ -2,13 +2,18 @@
   (leftButtonTapped)="goBack()"
   [leftButton]="backButton"
 ></porridge-header>
-<ion-content [fullscreen]="true" class="background-color cat-name-page">
+
+<ion-content [fullscreen]="true" class="background-color sign-up-page">
   <section class="cat-name-page__container">
     <p class="text-block">What is your kitty called?</p>
 
-    <form [formGroup]="catNameForm">
-      <ion-item class="cat-breed-page__name-item">
-        <ion-input formControlName="name" name="cat-name"></ion-input>
+    <form [formGroup]="catNameForm" class="cat-name-page__container__form">
+      <ion-item class="cat-name-page__name-item">
+        <ion-input
+          [tabIndex]="0"
+          formControlName="name"
+          placeholder="Name"
+        ></ion-input>
       </ion-item>
     </form>
   </section>
@@ -18,8 +23,8 @@
     I haven't decided
   </button>
   <ion-button (click)="addCat()" class="porridge-footer-button"
-  >Next
-  </ion-button
-  >
-
+  >Sign Up
+  </ion-button>
 </ion-footer>
+
+

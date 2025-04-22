@@ -10,8 +10,14 @@ import {
 } from '@ionic/angular/standalone';
 import { CatService } from '@onboarding/cat-service';
 import { NavController } from '@ionic/angular';
-import { HeaderButton } from '@ui/header';
+import { HeaderButton, HeaderComponent } from '@ui/header';
 import { Breed } from '@porridge/enums';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'onboarding-cat-breed',
@@ -23,6 +29,8 @@ import { Breed } from '@porridge/enums';
     IonItem,
     IonSelect,
     IonSelectOption,
+    ReactiveFormsModule,
+    HeaderComponent,
   ],
   templateUrl: './cat-breed.page.html',
   styleUrl: './cat-breed.page.scss',
@@ -35,6 +43,10 @@ export class CatBreedPage {
     icon: 'arrow-back-outline',
     iconColour: 'black',
   };
+
+  catBreedForm = new FormGroup({
+    breed: new FormControl('', [Validators.required]),
+  });
 
   catBreeds = computed(() => {
     return Object.values(Breed);
@@ -50,5 +62,13 @@ export class CatBreedPage {
     });
   }
 
-  submit() {}
+  async submit() {
+    this.catService.updateCat(this.catService.getCats()[0].id!, {
+      breed: this.catBreedForm.controls.breed.value!,
+    });
+
+    await this.navController.navigateForward('onboarding/cat-age', {
+      animated: false,
+    });
+  }
 }

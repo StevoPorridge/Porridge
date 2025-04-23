@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { Platform } from '@ionic/angular';
-import { StatusBar, Style } from '@capacitor/status-bar';
+import { StatusBar } from '@capacitor/status-bar';
 import { addIcons } from 'ionicons';
 import {
   arrowBackOutline,
@@ -35,8 +35,9 @@ export class AppComponent implements OnInit {
 
       // status bar
       if (!this.platform.is('mobileweb')) {
-        await StatusBar.setOverlaysWebView({ overlay: false });
-        await StatusBar.setStyle({ style: Style.Light });
+        await StatusBar.hide();
+        //await StatusBar.setOverlaysWebView({ overlay: false });
+        //await StatusBar.setStyle({ style: Style.Light });
       }
     });
   }

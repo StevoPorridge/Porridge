@@ -1,20 +1,19 @@
 import { Component, computed, inject } from '@angular/core';
-import { IonContent, IonTitle, NavController } from '@ionic/angular/standalone';
-import { Cat } from '../../../../../../../../../libs/cat/models/cat/cat.model';
-import { Gender } from '../../../../../../../../../libs/cat/enums/gender.enum';
+import { IonContent, NavController } from '@ionic/angular/standalone';
 import { HeaderButton } from '../../../../../../../../../libs/ui/header/src/lib/models/header-button.model';
-import { Breed } from '../../../../../../../../../libs/cat/enums/breeds.enum';
 import { HeaderComponent } from '@ui/header';
 import { CatTileComponent } from '@ui/cat-tile';
+import { CatService } from '@onboarding/cat-service';
 
 @Component({
   selector: 'porridge-profile',
   templateUrl: 'profile.page.html',
   styleUrls: ['profile.page.scss'],
-  imports: [IonContent, HeaderComponent, CatTileComponent, IonTitle],
+  imports: [IonContent, HeaderComponent, CatTileComponent],
 })
 export class ProfilePage {
   navController = inject(NavController);
+  catService = inject(CatService);
 
   rightButton: HeaderButton = {
     icon: 'close-circle-outline',
@@ -22,28 +21,10 @@ export class ProfilePage {
   };
 
   public cats = computed(() => {
-    const catArray: Cat[] = [];
-
-    catArray.push({
-      name: 'Belle',
-      dateOfBirth: 1430035200000,
-      breed: Breed.Moggy,
-      gender: Gender.FEMALE,
-      image: 'assets/test-images/belle1.jpg',
-    });
-
-    catArray.push({
-      name: 'Tucker',
-      dateOfBirth: 1303411200000,
-      breed: Breed.Moggy,
-      gender: Gender.MALE,
-      image: 'assets/test-images/belle2.jpg',
-    });
-
-    return catArray;
+    return this.catService.getCats();
   });
 
   async goBack(): Promise<void> {
-    await this.navController.navigateBack('tabs/home');
+    await this.navController.navigateBack('main/tabs/home');
   }
 }

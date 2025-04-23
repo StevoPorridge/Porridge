@@ -1,9 +1,13 @@
 <ion-card class="cat-tile">
-  <img
-    alt="Picture of {{ cat.name }}"
-    class="cat-tile__image"
-    fill=""
-    ngSrc="{{cat.image}}" />
+  @if (cat.image) {
+    <img
+      alt="Picture of {{ cat.name }}"
+      class="cat-tile__image"
+      height="1024"
+      ngSrc="{{cat.image}}"
+      width="1024" />
+  }
+
   <ion-card-header>
     <ion-card-title>{{ cat.name }}</ion-card-title>
   </ion-card-header>

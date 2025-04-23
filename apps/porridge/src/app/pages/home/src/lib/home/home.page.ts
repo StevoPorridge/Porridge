@@ -18,6 +18,6 @@ export class HomePage {
   };
 
   async goToProfile(): Promise<void> {
-    await this.navController.navigateForward('my-cats');
+    await this.navController.navigateForward('main/my-cats');
   }
 }

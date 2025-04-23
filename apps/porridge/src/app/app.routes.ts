@@ -11,10 +11,10 @@ export const routes: Routes = [
     loadChildren: () => import('@ui/tabs').then((m) => m.routes),
   },
   {
-    path: 'my-cats',
+    path: 'main/my-cats',
     loadComponent: () =>
       import('./pages/profile-page/src/lib/profile/profile.page').then(
-        (c) => c.ProfilePage
+        (c) => c.ProfilePage,
       ),
   },
 ];

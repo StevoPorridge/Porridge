@@ -46,6 +46,9 @@
       ],
       "@utility/validators/*": [
         "libs/utility/validators/*/src/index.ts"
+      ],
+      "@state/*": [
+        "libs/state/store/*/src/index.ts"
       ]
     },
     "rootDir": "."

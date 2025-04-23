@@ -57,7 +57,7 @@ export class CatBreedPage {
   });
 
   public async goBack(): Promise<void> {
-    await this.navController.navigateBack('onboarding/landing', {
+    await this.navController.navigateBack('onboarding/cat-name', {
       animated: false,
     });
   }

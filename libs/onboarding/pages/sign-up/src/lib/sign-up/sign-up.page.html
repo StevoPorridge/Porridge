@@ -8,7 +8,7 @@
     <p class="text-block">Let's create your account!</p>
 
     <form [formGroup]="signUpForm" class="sign-up-page__container__form">
-      <ion-item class="sign-up-page__email-item">
+      <ion-item class="sign-up-page__email-item" lines="none">
         <ion-input
           [tabIndex]="0"
           autocomplete="email"
@@ -18,7 +18,7 @@
         ></ion-input>
       </ion-item>
 
-      <ion-item class="sign-up-page__password-item">
+      <ion-item class="sign-up-page__password-item" lines="none">
         <ion-input
           [tabIndex]="1"
           class="porridge-input"
@@ -37,6 +37,6 @@
 </ion-content>
 <ion-footer class="onboarding-footer footer-container">
   <ion-button (click)="signUp()" class="porridge-footer-button"
-  >Sign Up
+  >Create account
   </ion-button>
 </ion-footer>

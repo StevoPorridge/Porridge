@@ -43,6 +43,9 @@
       ],
       "@ui/*": [
         "libs/ui/*/src/index.ts"
+      ],
+      "@utility/validators/*": [
+        "libs/utility/validators/*/src/index.ts"
       ]
     },
     "rootDir": "."

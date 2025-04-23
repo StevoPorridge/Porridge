@@ -8,7 +8,7 @@
     <p class="text-block">If you're not sure, select Mixed Breed or Moggy</p>
 
     <form [formGroup]="catBreedForm">
-      <ion-item class="cat-breed-page__breed-item">
+      <ion-item class="cat-breed-page__breed-item" lines="none">
         <ion-select formControlName="breed" placeholder="Select a breed">
           @for (breed of catBreeds(); track breed) {
             <ion-select-option [value]="breed">{{ breed }}</ion-select-option>

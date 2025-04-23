@@ -53,6 +53,14 @@ ion-content {
   padding-top: env(safe-area-inset-top);
 }
 
+ion-datetime {
+  --background: white;
+  --background-rgb: 255, 255, 255;
+
+  border-radius: 16px;
+  box-shadow: rgba(var(--ion-color-white-rgb), 0.3) 0px 10px 15px -3px;
+}
+
 ion-input {
   font-family: 'Merriweather', serif;
 }

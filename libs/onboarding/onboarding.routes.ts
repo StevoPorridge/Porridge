@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AuthGuard } from './onboarding.guard';
 
 export const routes: Routes = [
   {
@@ -22,7 +21,7 @@ export const routes: Routes = [
       {
         path: 'sign-up',
         loadComponent: () =>
-          import('./pages/questionnaire/src/lib/sign-up/sign-up.page').then(
+          import('./pages/sign-up/src/lib/sign-up/sign-up.page').then(
             (m) => m.SignUpPage,
           ),
       },
@@ -32,7 +31,7 @@ export const routes: Routes = [
           import('./pages/cat-breed/src/lib/cat-breed/cat-breed.page').then(
             (m) => m.CatBreedPage,
           ),
-        canActivate: [AuthGuard],
+        //canActivate: [AuthGuard],
       },
       {
         path: 'cat-name',
@@ -40,7 +39,7 @@ export const routes: Routes = [
           import('./pages/cat-name/src/lib/cat-name/cat-name.page').then(
             (m) => m.CatNamePage,
           ),
-        canActivate: [AuthGuard],
+        //canActivate: [AuthGuard],
       },
       {
         path: 'cat-age',
@@ -48,7 +47,7 @@ export const routes: Routes = [
           import('./pages/cat-age/src/lib/cat-age/cat-age.page').then(
             (m) => m.CatAgePage,
           ),
-        canActivate: [AuthGuard],
+        //canActivate: [AuthGuard],
       },
       {
         path: '',

@@ -1,1 +1,21 @@
-<porridge-header (leftButtonTapped)="goBack()" [leftButton]="backButton"></porridge-header>
+<porridge-header
+  (leftButtonTapped)="goBack()"
+  [leftButton]="backButton"
+></porridge-header>
+<ion-content [fullscreen]="true" class="background-color cat-age-page">
+  <section class="cat-age-page__container">
+    <p class="text-block">What is the age of {{ catName() }}?</p>
+
+    <form [formGroup]="catAgeForm">
+      <ion-item class="cat-age-page__breed-item" lines="none">
+        <ion-datetime color="white" formControlName="dateOfBirth" max="{{currentDate}}" prefer-wheel="false"
+                      presentation="date"></ion-datetime>
+      </ion-item>
+    </form>
+
+  </section>
+
+</ion-content>
+<ion-footer class="onboarding-footer">
+  <ion-button (click)="submit()" class="porridge-footer-button">Next</ion-button>
+</ion-footer>

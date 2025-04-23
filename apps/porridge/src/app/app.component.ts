@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
       // status bar
       if (!this.platform.is('mobileweb')) {
-        await StatusBar.setOverlaysWebView({ overlay: true });
+        await StatusBar.setOverlaysWebView({ overlay: false });
         await StatusBar.setStyle({ style: Style.Light });
       }
     });

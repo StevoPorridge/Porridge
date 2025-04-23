@@ -19,5 +19,10 @@
   &__gender-item {
     width: 100%;
     --background: white;
+
+    &__button {
+      width: 150px;
+      height: 150px;
+    }
   }
 }

@@ -8,8 +8,11 @@
 
     <form [formGroup]="catGenderForm">
       <ion-item class="cat-gender-page__breed-item" lines="none">
-        <ion-button (click)="genderSelected(Gender.MALE)" class="cat-gender-page__gender-item__button">Male</ion-button>
-        <ion-button (click)="genderSelected(Gender.FEMALE)" class="cat-gender-page__gender-item__button">Female
+        <ion-button (click)="genderSelected(Gender.MALE)"
+                    class="porridge-standard-button cat-gender-page__gender-item__button">Male
+        </ion-button>
+        <ion-button (click)="genderSelected(Gender.FEMALE)"
+                    class="porridge-standard-button cat-gender-page__gender-item__button">Female
         </ion-button>
       </ion-item>
     </form>

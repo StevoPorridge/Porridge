@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   User,
 } from 'firebase/auth';
 import { Injectable } from '@angular/core';
@@ -27,6 +28,17 @@ export class AuthenticationService {
 
   async signUp(email: string, password: string): Promise<User | undefined> {
     return createUserWithEmailAndPassword(this.auth, email, password)
+      .then((userCredential) => {
+        return userCredential.user;
+      })
+      .catch((error) => {
+        console.log('error: ', error);
+        return undefined;
+      });
+  }
+
+  async signIn(email: string, password: string): Promise<User | undefined> {
+    return signInWithEmailAndPassword(this.auth, email, password)
       .then((userCredential) => {
         return userCredential.user;
       })

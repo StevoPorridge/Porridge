@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavController } from '@ionic/angular';
-import { HeaderButton, HeaderComponent } from '../../../../../../ui/header/src';
+import { backButton, HeaderComponent } from '@ui/header';
 import {
   IonButton,
   IonContent,
@@ -35,15 +35,10 @@ import {
 export class CatNamePage {
   navController = inject(NavController);
   catService = inject(CatService);
-
-  backButton: HeaderButton = {
-    icon: 'arrow-back-outline',
-    iconColour: 'black',
-  };
-
   catNameForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
   });
+  protected readonly backButton = backButton;
 
   public async addCat(): Promise<void> {
     this.catService.resetCats();
@@ -57,14 +52,10 @@ export class CatNamePage {
       name = this.catNameForm.controls.name.value;
     }
     this.catService.addCat({ name });
-    await this.navController.navigateForward('onboarding/cat-breed', {
-      animated: false,
-    });
+    await this.navController.navigateForward('onboarding/cat-breed');
   }
 
   public async goBack(): Promise<void> {
-    await this.navController.navigateBack('onboarding/landing', {
-      animated: false,
-    });
+    await this.navController.navigateBack('onboarding/landing');
   }
 }

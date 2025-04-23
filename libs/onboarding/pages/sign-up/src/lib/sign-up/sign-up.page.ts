@@ -17,7 +17,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthenticationService } from '@authentication/service';
-import { HeaderButton, HeaderComponent } from '@ui/header';
+import { backButton, HeaderComponent } from '@ui/header';
 
 @Component({
   selector: 'onboarding-sign-up',
@@ -47,17 +47,12 @@ export class SignUpPage {
     ]),
   });
 
-  backButton: HeaderButton = {
-    icon: 'arrow-back-outline',
-    iconColour: 'black',
-  };
-
   error = '';
 
+  protected readonly backButton = backButton;
+
   public async goBack(): Promise<void> {
-    await this.navController.navigateBack('onboarding/landing', {
-      animated: false,
-    });
+    await this.navController.navigateBack('onboarding/landing');
   }
 
   public showError(control: AbstractControl): boolean {

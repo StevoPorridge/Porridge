@@ -16,14 +16,10 @@ export class LandingPage {
   navController = inject(NavController);
 
   async signUp(): Promise<void> {
-    await this.navController.navigateForward('onboarding/sign-up', {
-      animated: false,
-    });
+    await this.navController.navigateForward('onboarding/sign-up');
   }
 
   async signIn(): Promise<void> {
-    await this.navController.navigateForward('onboarding/sign-in', {
-      animated: false,
-    });
+    await this.navController.navigateForward('onboarding/sign-in');
   }
 }

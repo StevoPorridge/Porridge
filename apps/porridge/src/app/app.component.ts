@@ -1,5 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import {
+  IonApp,
+  IonRouterOutlet,
+  NavController,
+} from '@ionic/angular/standalone';
 import { Platform } from '@ionic/angular';
 import { StatusBar } from '@capacitor/status-bar';
 import { addIcons } from 'ionicons';
@@ -19,6 +23,7 @@ import { firebaseConfig } from '../configs/firebase-dev.config';
 })
 export class AppComponent implements OnInit {
   platform = inject(Platform);
+  navController = inject(NavController);
 
   ngOnInit() {
     this.platform.ready().then(async () => {

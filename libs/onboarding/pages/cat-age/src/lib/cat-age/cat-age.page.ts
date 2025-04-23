@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderButton, HeaderComponent } from '@ui/header';
+import { backButton, HeaderComponent } from '@ui/header';
 import { NavController } from '@ionic/angular';
 import {
   IonButton,
@@ -36,29 +36,20 @@ import { dateNotInFutureValidator } from '@utility/validators/form-control-valid
 export class CatAgePage {
   navController = inject(NavController);
   catService = inject(CatService);
-
-  backButton: HeaderButton = {
-    icon: 'arrow-back-outline',
-    iconColour: 'black',
-  };
-
   catAgeForm = new FormGroup({
     dateOfBirth: new FormControl('', [
       Validators.required,
       dateNotInFutureValidator(),
     ]),
   });
-
   currentDate = new Date();
-
   catName = computed(() => {
     return this.catService.getCats()[0].name;
   });
+  protected readonly backButton = backButton;
 
   public async goBack(): Promise<void> {
-    await this.navController.navigateBack('onboarding/cat-breed', {
-      animated: false,
-    });
+    await this.navController.navigateBack('onboarding/cat-breed');
   }
 
   async submit() {
@@ -73,8 +64,6 @@ export class CatAgePage {
       ).getTime(),
     });
 
-    await this.navController.navigateForward('main/tabs/home', {
-      animated: false,
-    });
+    await this.navController.navigateForward('main/tabs/home');
   }
 }

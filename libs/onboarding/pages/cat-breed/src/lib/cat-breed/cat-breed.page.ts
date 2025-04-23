@@ -10,7 +10,7 @@ import {
 } from '@ionic/angular/standalone';
 import { CatService } from '@onboarding/cat-service';
 import { NavController } from '@ionic/angular';
-import { HeaderButton, HeaderComponent } from '@ui/header';
+import { backButton, HeaderComponent } from '@ui/header';
 import { Breed } from '@porridge/enums';
 import {
   FormControl,
@@ -38,28 +38,19 @@ import {
 export class CatBreedPage {
   catService = inject(CatService);
   navController = inject(NavController);
-
-  backButton: HeaderButton = {
-    icon: 'arrow-back-outline',
-    iconColour: 'black',
-  };
-
   catBreedForm = new FormGroup({
     breed: new FormControl('', [Validators.required]),
   });
-
   catBreeds = computed(() => {
     return Object.values(Breed);
   });
-
   catName = computed(() => {
     return this.catService.getCats()[0].name;
   });
+  protected readonly backButton = backButton;
 
   public async goBack(): Promise<void> {
-    await this.navController.navigateBack('onboarding/cat-name', {
-      animated: false,
-    });
+    await this.navController.navigateBack('onboarding/cat-name');
   }
 
   async submit() {
@@ -67,8 +58,6 @@ export class CatBreedPage {
       breed: this.catBreedForm.controls.breed.value!,
     });
 
-    await this.navController.navigateForward('onboarding/cat-age', {
-      animated: false,
-    });
+    await this.navController.navigateForward('onboarding/cat-age');
   }
 }

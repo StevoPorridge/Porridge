@@ -50,6 +50,33 @@ p {
 ion-content {
   --ion-background-color: var(--porridge-color-primary);
   font-family: 'Merriweather', serif;
+  padding-top: env(safe-area-inset-top);
+}
+
+ion-input {
+  font-family: 'Merriweather', serif;
+}
+
+.sc-ion-input-ios-h {
+  font-family: 'Merriweather', serif;
+}
+
+ion-item {
+  font-family: 'Merriweather', serif;
+}
+
+ion-select {
+  font-family: 'Merriweather', serif;
+}
+
+ion-input {
+  --color: black;
+  --background: white;
+
+  --max-width: 75%;
+  --width: 75%;
+  overflow: hidden;
+  font-family: 'Merriweather', serif;
 }
 
 .text-block {
@@ -82,31 +109,6 @@ ion-content {
   display: block;
 }
 
-ion-input {
-  font-family: 'Merriweather', serif;
-}
-
-.sc-ion-input-ios-h {
-  font-family: 'Merriweather', serif;
-}
-
-ion-item {
-  font-family: 'Merriweather', serif;
-}
-
-ion-select {
-  font-family: 'Merriweather', serif;
-}
-
-ion-input {
-  --color: black;
-  --background: white;
-
-  --max-width: 75%;
-  --width: 75%;
-  overflow: hidden;
-  font-family: 'Merriweather', serif;
-}
 
 .onboarding-footer {
   box-shadow: none;

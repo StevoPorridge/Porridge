@@ -2,8 +2,8 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.porridge.app',
-  appName: 'porridge',
-  webDir: 'www',
+  appName: 'Porridge',
+  webDir: 'dist/apps/porridge/browser',
   plugins: {
     EdgeToEdge: {
       backgroundColor: '#ffffff',

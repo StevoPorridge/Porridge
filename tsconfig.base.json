@@ -41,17 +41,17 @@
       "@porridge/onboarding/*": [
         "libs/onboarding/pages/*/src/index.ts"
       ],
+      "@state/*": [
+        "libs/state/store/*/src/index.ts"
+      ],
       "@ui/*": [
         "libs/ui/*/src/index.ts"
-      ],
-      "@utility/validators/*": [
-        "libs/utility/validators/*/src/index.ts"
       ],
       "@utility/guards": [
         "libs/utility/guards/index.ts"
       ],
-      "@state/*": [
-        "libs/state/store/*/src/index.ts"
+      "@utility/validators/*": [
+        "libs/utility/validators/*/src/index.ts"
       ]
     },
     "rootDir": "."

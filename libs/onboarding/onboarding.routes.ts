@@ -50,6 +50,14 @@ export const routes: Routes = [
         //canActivate: [AuthGuard],
       },
       {
+        path: 'cat-gender',
+        loadComponent: () =>
+          import('./pages/cat-gender/src/lib/cat-gender/cat-gender.page').then(
+            (m) => m.CatGenderPage,
+          ),
+        //canActivate: [AuthGuard],
+      },
+      {
         path: '',
         redirectTo: 'landing',
         pathMatch: 'full',

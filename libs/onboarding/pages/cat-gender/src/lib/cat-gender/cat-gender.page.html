@@ -1,0 +1,19 @@
+<porridge-header
+  (leftButtonTapped)="goBack()"
+  [leftButton]="backButton"
+></porridge-header>
+<ion-content [fullscreen]="true" class="background-color cat-gender-page">
+  <section class="cat-gender-page__container">
+    <p class="text-block">What is the gender of {{ catName() }}?</p>
+
+    <form [formGroup]="catGenderForm">
+      <ion-item class="cat-gender-page__breed-item" lines="none">
+        <ion-button (click)="genderSelected(Gender.MALE)" class="cat-gender-page__gender-item__button">Male</ion-button>
+        <ion-button (click)="genderSelected(Gender.FEMALE)" class="cat-gender-page__gender-item__button">Female
+        </ion-button>
+      </ion-item>
+    </form>
+
+  </section>
+
+</ion-content>

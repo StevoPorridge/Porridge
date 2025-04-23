@@ -64,6 +64,6 @@ export class CatAgePage {
       ).getTime(),
     });
 
-    await this.navController.navigateForward('main/tabs/home');
+    await this.navController.navigateForward('onboarding/cat-gender');
   }
 }

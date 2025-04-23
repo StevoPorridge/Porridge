@@ -38,9 +38,11 @@ import {
 export class CatBreedPage {
   catService = inject(CatService);
   navController = inject(NavController);
+
   catBreedForm = new FormGroup({
     breed: new FormControl('', [Validators.required]),
   });
+
   catBreeds = computed(() => {
     return Object.values(Breed);
   });

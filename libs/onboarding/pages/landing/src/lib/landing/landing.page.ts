@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
   IonButton,
   IonContent,
@@ -8,7 +8,7 @@ import {
 
 @Component({
   selector: 'onboarding-landing',
-  imports: [CommonModule, IonContent, IonButton],
+  imports: [CommonModule, IonContent, IonButton, NgOptimizedImage],
   templateUrl: './landing.page.html',
   styleUrl: './landing.page.scss',
 })

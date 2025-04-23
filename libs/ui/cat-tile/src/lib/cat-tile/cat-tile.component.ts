@@ -7,6 +7,7 @@ import {
   IonCardTitle,
 } from '@ionic/angular/standalone';
 import { TimestampToDatePipe } from '../../../../../../apps/porridge/src/app/pipes/timestamp-to-date.pipe';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'porridge-cat-tile',
@@ -18,6 +19,7 @@ import { TimestampToDatePipe } from '../../../../../../apps/porridge/src/app/pip
     IonCardTitle,
     IonCardHeader,
     TimestampToDatePipe,
+    NgOptimizedImage,
   ],
 })
 export class CatTileComponent {

@@ -1,16 +1,16 @@
 <ion-card class="cat-tile">
   <img
-    [src]="cat.image"
     alt="Picture of {{ cat.name }}"
     class="cat-tile__image"
-  />
+    fill=""
+    ngSrc="{{cat.image}}" />
   <ion-card-header>
     <ion-card-title>{{ cat.name }}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content class="cat-tile__content">
-    Date Of Birth: {{ cat.dateOfBirth! | timestampToDate }} <br/>
-    Breed: {{ cat.breed }} <br/>
-    Gender: {{ cat.gender }} <br/>
+    Date Of Birth: {{ cat.dateOfBirth! | timestampToDate }} <br />
+    Breed: {{ cat.breed }} <br />
+    Gender: {{ cat.gender }} <br />
   </ion-card-content>
 </ion-card>

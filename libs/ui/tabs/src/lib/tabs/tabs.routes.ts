@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { TabsComponent } from './tabs.component';
-import { AuthGuard } from '../../../../../onboarding/onboarding.guard';
+import { AuthGuard } from '../../../../../utility/guards/onboarding.guard';
 
 export const routes: Routes = [
   {

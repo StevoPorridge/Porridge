@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from '@utility/guards';
 
 export const routes: Routes = [
   {
@@ -9,6 +10,7 @@ export const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('@ui/tabs').then((m) => m.routes),
+    canActivate: [AuthGuard],
   },
   {
     path: 'main/my-cats',
@@ -16,5 +18,6 @@ export const routes: Routes = [
       import('./pages/profile-page/src/lib/profile/profile.page').then(
         (c) => c.ProfilePage,
       ),
+    canActivate: [AuthGuard],
   },
 ];

@@ -5,7 +5,7 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { AuthenticationService } from '../authentication/services/authentication-service/src';
+import { AuthenticationService } from '../../authentication/services/authentication-service/src';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +22,6 @@ export class AuthGuard implements CanActivate {
   ): Promise<boolean> {
     // Wait for the user authentication status
     const currentUser = await this.authenticationService.getCurrentUser();
-
     if (currentUser) {
       return true;
     } else {

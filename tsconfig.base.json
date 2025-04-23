@@ -47,6 +47,9 @@
       "@utility/validators/*": [
         "libs/utility/validators/*/src/index.ts"
       ],
+      "@utility/guards": [
+        "libs/utility/guards/index.ts"
+      ],
       "@state/*": [
         "libs/state/store/*/src/index.ts"
       ]
